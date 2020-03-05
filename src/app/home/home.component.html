@@ -1,0 +1,21 @@
+<h2>My Contacts</h2>
+
+<div class="row">
+  <div class="col l3" *ngFor="let contact of contacts">
+    <div class="card">
+      <div class="card-image">
+        <img src="https://cdn.pixabay.com/photo/2014/04/03/10/44/person-311292_960_720.png">
+      </div>
+      <div class="card-content center-align">
+        <span class="card-title">{{contact?.name}}</span>
+        <p>{{contact?.number}}</p>
+        <p>{{contact?.email}}</p>
+      </div>
+      <div class="card-action">
+        <a [routerLink]="['contact', contact.id]">VIEW CONTACT <i class="material-icons right">remove_red_eye</i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+

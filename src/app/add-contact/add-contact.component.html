@@ -1,0 +1,43 @@
+<h3>Add Contact</h3>
+
+<div class="row">
+  <div class="col s12 l4">
+    <img class="materialboxed" width="50%" src="https://cdn.pixabay.com/photo/2014/04/03/10/44/person-311292_960_720.png">
+  </div>
+
+  <form class="col s12 l8" [formGroup]="contactForm"(ngSubmit)="onSumit()">
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">account_box</i>
+          <input formControlName="id" id="contactId" type="text" class="validate">
+          <label for="contactId">Contact ID</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">account_circle</i>
+          <input formControlName="name" id="nom" type="text" class="validate">
+          <label for="nom">Nombre</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">phone</i>
+          <input formControlName="number" id="tele" type="tel" class="validate">
+          <label for="tele">Teléfono</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">email</i>
+          <input formControlName="email" id="crro" type="text" class="validate">
+          <label for="crro">E-mail</label>
+        </div>
+      </div>
+
+      <button class="waves-effect waves-light btn-large modal-trigger delete" href="#addModal">Add</button>
+    </form>
+</div>
